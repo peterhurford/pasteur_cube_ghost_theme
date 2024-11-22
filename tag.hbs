@@ -1,35 +1,22 @@
 {{!< default}}
+{{!-- The tag above means: insert everything in this file into the body of the default.hbs template --}}
 
-<main class="site-main">
+<main class="gh-main gh-outer">
 
     {{#tag}}
-    <section class="tag">
-
-        <div class="gh-canvas">
-
-            <h1 class="tag-name">{{name}}</h1>
-
-            {{#if description}}
-                <div class="tag-description">{{description}}</div>
-            {{/if}}
-
-            {{#if feature_image}}
-                <div class="tag-media u-placeholder horizontal kg-width-wide">
-                    <img class="u-object-fit" srcset="{{> srcset}}" src="{{img_url feature_image size="l"}}" alt="{{name}}">
-                </div>
-            {{/if}}
-
-        </div>
-
-    </section>
+        <section class="gh-archive{{#if feature_image}} has-image{{/if}}{{#if @custom.show_publication_info_sidebar}} has-sidebar{{/if}} gh-inner">
+            <div class="gh-archive-inner">
+                <header class="gh-archive-wrapper">
+                    <h1 class="gh-article-title is-title">{{name}}</h1>
+                    {{#if description}}
+                        <p class="gh-article-excerpt">{{description}}</p>
+                    {{/if}}
+                </header>
+                {{> "feature-image"}}
+            </div>
+        </section>
     {{/tag}}
 
-    <div class="post-feed gh-feed gh-canvas">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
-    </div>
-
-    {{pagination}}
+    {{> "components/post-list" feed="archive" postFeedStyle=@custom.post_feed_style showTitle=false showSidebar=@custom.show_publication_info_sidebar}}
 
 </main>
