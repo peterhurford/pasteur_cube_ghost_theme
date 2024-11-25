@@ -1,14 +1,22 @@
-# Source
+# Pasteur Cube Ghost Theme
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Source! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Source/releases) page.
+This is the theme for the front-end of https://www.pasteurscube.com/
 
-&nbsp;
+It was built as a modification of [the Source theme](https://github.com/TryGhost/Source) for [Ghost](http://github.com/tryghost/ghost/), intended to be in "Highlight" mode.
 
-# First time using a Ghost theme?
+The modifications are to: 
+
+- Simplify the front page and highlight the featured posts more cleanly
+- Move the nagging box for subscriptions all the way to the bottom
+
+That's it!
+
+
+# Notes on Ghost themes
 
 Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
 
-This theme has lots of code comments to help explain what's going on just by reading the code. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://ghost.org/docs/themes/) which explains every possible Handlebars helper and template.
+This theme has lots of code comments to help explain what's going on just by reading the code. Once you feel comfortable with how everything works, Ghost also has full [theme API documentation](https://ghost.org/docs/themes/) which explains every possible Handlebars helper and template.
 
 **The main files are:**
 
@@ -62,4 +70,4 @@ You can add your own SVG icons in the same manner.
 
 # Copyright & License
 
-Copyright (c) 2013-2023 Ghost Foundation - Released under the [MIT license](LICENSE).
+Released under the [MIT license](LICENSE).
